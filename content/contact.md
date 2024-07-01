@@ -4,9 +4,9 @@ layout: "contact"
 draft: false
 info: 
   title: Why you should contact us!
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt.
+  description: Contact us today to learn more about how we can help you grow your business online.
   contacts: 
-    - "phone: +88 125 256 452"
-    - "Mail: [info@synctechs.com](mailto:info@synctechs.com)"
-    - "Address: 360 Main rd, Rio, Brazil"
+    - "phone: +919826747763"
+    - "Mail: [info@synctechs.me](mailto:synctechs.agency@gmail.com)"
+    
 ---
