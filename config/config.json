@@ -1,12 +1,12 @@
 {
   "site": {
-    "title": "synctechs Light Nextjs",
+    "title": "synctechs",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_width": "200",
     "logo_height": "48",
-    "logo_text": "synctechs Light"
+    "logo_text": "synctechs"
   },
 
   "settings": {
@@ -24,13 +24,13 @@
   "params": {
     "contact_form_action": "",
     "tag_manager_id": "",
-    "footer_content": "Lorem ipsum dolor sit amet, consectetur elit. Consjat tristique eget amet, tempus eu at cttur.",
-    "copyright": "Designed and Developed By [Themefisher](https://themefisher.com/)"
+    "footer_content": "SyncTechs is a premier web development company specializing in cutting-edge technologies. We deliver high-quality web development services and offer expert consultation to help you achieve your digital goals. ",
+    "copyright": "Copyright © 2024 Synctechs, All Right Reserved. "
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Synctechs",
     "meta_image": "",
-    "meta_description": "A SAAS template for nextjs"
+    "meta_description": "SyncTechs is a premier web development company in india. specializing in cutting-edge technologies. We deliver high-quality web development services and offer expert consultation to help you achieve your digital goals. "
   }
 }
