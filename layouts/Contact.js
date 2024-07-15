@@ -1,10 +1,27 @@
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, info } = frontmatter;
-  const { contact_form_action } = config.params;
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_j05gthp', 'template_2292229', form.current, 'FFejW-HINLmbe72bF')
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
   return (
     <section className="section">
@@ -12,15 +29,11 @@ const Contact = ({ data }) => {
         {markdownify(title, "h1", "text-center font-normal")}
         <div className="section row pb-0">
           <div className="col-12 md:col-6 lg:col-7">
-            <form
-              className="contact-form"
-              method="POST"
-              action={contact_form_action}
-            >
+            <form ref={form} className="contact-form" onSubmit={sendEmail}>
               <div className="mb-3">
                 <input
                   className="form-input w-full rounded"
-                  name="name"
+                  name="user_name"
                   type="text"
                   placeholder="Name"
                   required
@@ -29,7 +42,7 @@ const Contact = ({ data }) => {
               <div className="mb-3">
                 <input
                   className="form-input w-full rounded"
-                  name="email"
+                  name="user_email"
                   type="email"
                   placeholder="Your email"
                   required
@@ -48,6 +61,7 @@ const Contact = ({ data }) => {
                 <textarea
                   className="form-textarea w-full rounded-md"
                   rows="7"
+                  name="message"
                   placeholder="Your message"
                 />
               </div>
