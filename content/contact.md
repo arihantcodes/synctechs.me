@@ -7,6 +7,6 @@ info:
   description: Contact us today to learn more about how we can help you grow your business online.
   contacts: 
     - "phone: +919826747763"
-    - "Mail: [info@synctechs.me](mailto:synctechs.agency@gmail.com)"
+    - "Mail: [synctechs.agency@gmail.com](mailto:synctechs.agency@gmail.com)"
     
 ---
