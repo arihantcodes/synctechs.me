@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
@@ -7,18 +7,22 @@ const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, info } = frontmatter;
   const form = useRef();
+  const [isSending, setIsSending] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSending(true); // Set sending state to true
 
     emailjs
       .sendForm('service_j05gthp', 'template_2292229', form.current, 'FFejW-HINLmbe72bF')
       .then(
         () => {
           console.log('SUCCESS!');
+          setIsSending(false); // Reset sending state
         },
         (error) => {
           console.log('FAILED...', error.text);
+          setIsSending(false); // Reset sending state
         },
       );
   };
@@ -65,8 +69,8 @@ const Contact = ({ data }) => {
                   placeholder="Your message"
                 />
               </div>
-              <button type="submit" className="btn btn-primary">
-                Send Now
+              <button type="submit" className="btn btn-primary" disabled={isSending}>
+                {isSending ? 'Sending...' : 'Send Now'}
               </button>
             </form>
           </div>
